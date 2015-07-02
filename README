@@ -1,0 +1,1 @@
+Saves an image recorded from a GigE Vision device via Aravis, as a png. Requires aravis and libpng1.2
