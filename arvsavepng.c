@@ -38,5 +38,7 @@ void arv_save_png(ArvBuffer * buffer, const char * filename)
 	// Actually write image
 	png_write_image(png_ptr, rows);
 	png_write_end(png_ptr, NULL); // cleanup
+	png_free(png_ptr, rows);
+	png_destroy_write_struct(&png_ptr, &info_ptr);
 	fclose(f);
 }
